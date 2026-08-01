@@ -1,3 +1,6 @@
+## 01.08.2026
+Finished Linux privilege Escalation and Writeup and started taking a look at Linux Syntax - Variables, Strings, Lists
+
 ## 18.07.2026
 - Continued with Linux privilege Escalation
 
