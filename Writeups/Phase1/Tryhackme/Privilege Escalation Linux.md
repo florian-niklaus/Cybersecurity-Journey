@@ -1,7 +1,7 @@
 ## What is privilege escalation?
 
 - Involves going from lower permission account to a higher permission one
-- Rare cases where attacker gains admin access directly -> Privilege escalation is needed to gain more and more levels of access to gain more controll
+- Rare cases where attacker gains admin access directly -> Privilege escalation is needed to gain more control
 
 ## Enumeration
 
@@ -11,10 +11,10 @@ First step once access was gained -> get more and more information about the sys
 Command can expose purpose of the system (e.g. SQL-PROD-01 will be a production SQL server)
 
 ### uname -a
-Command prints system informations giving additional details about the kernal used by the system -> useful when searching for any potential kernel vulnerabilitie that could lead to privilege escalation
+Command prints system informations giving additional details about the kernel used by the system -> useful when searching for any potential kernel vulnerabilitie that could lead to privilege escalation
 
 ### proc/version
-Command gives information about target system processes -> Info about kernal version and additional data such as whether a compiler is installed
+Command gives information about target system processes -> Info about kernel version and additional data such as whether a compiler is installed
 
 ### /etc/issue
 System can be identified by looking at `/etc/issue`-file -> It contains some infos about OS
@@ -32,7 +32,7 @@ CMD: command or executable running
 - `ps aux` = shows processes of all users
 
 ### env
-Shows environmental variablesls
+Shows environmental variables
 
 ### sudo -l
 Target system may be configured to allow users to run some commands with root privileges. This command lists all commands the user can run
@@ -71,32 +71,32 @@ Different command useCases:
 - `find /home -user frank` = finds all files for user frank in /home
 - `find / -mtime 10 ` = finds all files that were modified in the last 10 days
 - `find / -atime 10` =  finds all files that were accessed in the last 10 days
-- `find / -cmin -60` =  finds all files that were changed within the last hoour
-- `find / -amin -60` = finds all files that were accessed  within the last hoour
-- `find / -size 50M` = finds files with 50MB size (can be used with `+`or `-` to show files greater/shorter)
+- `find / -cmin -60` =  finds all files that were changed within the last hour
+- `find / -amin -60` = finds all files that were accessed  within the last hour
+- `find / -size 50M` = finds files with 50MB size (can be used with `+` or `-` to show files greater/shorter)
 - `find / -writable -type d 2>/dev/null` = Find world-writeable folders
 - `find / -perm -222 -type d 2>/dev/null` = Find world-writeable folders
 - `find / -perm -o w -type d 2>/dev/null` = Find world-writeable folders
 
 ## Privilege Escalation: Karnel Exploits
-Goal: Gain root privileges; sometimes archieved threw simply exploiting an exisiting vulnerability
+Goal: Gain root privileges; sometimes archieved through simply exploiting an exisiting vulnerability
 Always go for the 3 Steps:
 1) Identify the kernal version
 2) Search and find exploit code for the kernel version of the target version
 3) Run the exploit
 
-IMPORTANT: runable exploit must be written in a language which is also installed on the target system
+IMPORTANT: runnable exploit must be written in a language which is also installed on the target system
 
 ## Privilege Escalation: SUID
 
 With the Command `find / -type f -perm -04000 -ls 2>/dev/null` console is showing files that have SUID(Set-user Identification) or SGID(Set-Group Identification) bits
--> With help of [GTFOBins](https://gtfobins.org/) it is again possible to search for exploitable missconfigurations. In this case it is base64 which allows the user to read files without having root privilege
+-> With help of [GTFOBins](https://gtfobins.org/) it is again possible to search for exploitable misconfigurations. In this case it is base64 which allows the user to read files without having root privilege
 
 ## Privilege Escalation: Capabilities
 
-- System admins can increase privilege level of a process or binary is "Capabilities"
+- System admins can increase privilege level of a process or binary is called "Capabilities"
 - `getcap -r /` lists enabled capabilities
-- With help of [GTFOBins](https://gtfobins.org/) it is again possible to search for exploitable missconfigurations.
+- With help of [GTFOBins](https://gtfobins.org/) it is again possible to search for exploitable misconfigurations.
 
 ## Privilege Escalation: Cron Jobs
 
@@ -106,5 +106,24 @@ Idea: Task that runs with root privileges and user can change the script ( for e
 Sometimes useless scripts are not getting cleaned up and just deleted 
 
 ## Privilege Escalation: PATH
+
+$PATH is an environmental variable that tells where to search for executables when no absolute path is defined 
+If there are executables with the SUID set and the executable is executed by root user AND the file searching for just a executable without a absolute path being defined -> exploitable
+There is a simple way to exploit:
+1) Find a directory where the current user has write permissions.
+2) Create a malicious executable with the same name as the program the vulnerable binary tries to run.
+3) Make the file executable with `chmod +x`.
+4) Prepend the directory to `$PATH` using `export PATH=/newPath:$PATH`
+5) Execute the vulnerable binary. If it runs your file first, the command is executed in the privileged context.
+
+## Privilege Escalation: NFS(Network File Sharing)
+
+If there are NFS's with option `no_root_squash` enabled -> NFS will change the root user to nfsnobody and strip any file from operating with root privileges
+If `no_root_squash` enabled -> executable with SUID bit set can be created and run on target system
+1) Enumerate exported shares with `showmount -e IP_TARGET`
+2) Mount the share on your local machine.
+3) Create or modify files on the share as root on the client side.
+4) If `no_root_squash` is enabled, root-owned files can retain their privileges on the NFS export.
+5) This may allow privilege escalation, depending on the mount options and the target configuration.
 
 
