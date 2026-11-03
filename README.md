@@ -11,8 +11,7 @@ My current focus is **web security, Linux, networking, privilege escalation and 
 ## 👤 Background
 
 - Working student in an InfoSec team at SSI Schäfer  
-- Computer Science student with coursework in networking, operating systems and programming  
-- Starting B.Eng. Information Security in October 2026  
+- Information security student   
 - Familiar with Linux, networking fundamentals, Wireshark, Burp Suite and Nmap  
 - Interested in SOC operations, vulnerability assessment, web security and offensive security  
 
@@ -23,7 +22,6 @@ My current focus is **web security, Linux, networking, privilege escalation and 
 - Strengthen web-security fundamentals through PortSwigger Web Security Academy  
 - Build practical Linux and Active Directory knowledge  
 - Practice enumeration, privilege escalation and reporting through guided labs  
-- Develop small security tooling in Python  
 - Document labs and findings in clear, reproducible write-ups  
 
 ---
@@ -31,10 +29,10 @@ My current focus is **web security, Linux, networking, privilege escalation and 
 ## 🗺️ Learning Roadmap
 
 | Phase | Timeframe | Focus | Status |
-|---|---|---|---|
-| **Phase 1** | Jun – Sep 2026 | Web security, Linux, networking, HTB basics | 🔄 In progress |
-| **Phase 2** | Oct 2026 – Jan 2027 | Active Directory, privilege escalation, eJPT preparation, SOC fundamentals | ⏳ Upcoming |
-| **Phase 3** | Feb 2027+ | Deeper offensive security, cloud security basics, detection engineering | ⏳ Planned |
+|---|---|---|
+| **Phase 1**  | Web security, Linux, networking, HTB basics | 🔄 In progress |
+| **Phase 2**  | Active Directory, privilege escalation, eJPT preparation, SOC fundamentals | ⏳ Upcoming |
+| **Phase 3**  | Deeper offensive security, cloud security basics, detection engineering | ⏳ Planned |
 
 ---
 
@@ -50,18 +48,19 @@ My current focus is **web security, Linux, networking, privilege escalation and 
 - [x] PortSwigger — Path Traversal  
 - [x] PortSwigger — File Upload Vulnerabilities  
 - [x] PortSwigger — Authentication  
-- [x] Tooling basics: Burp Suite, Nmap, Wireshark  
+- [x] Tooling basics: Burp Suite, Nmap, Wireshark
+- [x] PortSwigger — SQL Injection  
+- [x] PortSwigger — XSS
+- [x] TryHackMe — Linux Privilege Escalation  
+- [x] Hack The Box — Starting Point and easy machines  
+
 
 ### In progress
 
-- [ ] PortSwigger — SQL Injection  
-- [ ] PortSwigger — XSS  
 - [ ] PortSwigger — IDOR  
 - [ ] PortSwigger — SSRF  
 - [ ] PortSwigger — XXE  
-- [ ] TryHackMe — Linux Privilege Escalation  
 - [ ] TryHackMe — Windows Privilege Escalation  
-- [ ] Hack The Box — Starting Point and easy machines  
 - [ ] Python recon tool: subdomain enumeration, port scanning and HTML reporting  
 
 ### Milestones
@@ -106,7 +105,7 @@ My current focus is **web security, Linux, networking, privilege escalation and 
 
 | Tool | Description | Status |
 |---|---|---|
-| `recon-tool` | Python-based recon workflow for subdomain enumeration, port scanning and HTML reporting | In progress |
+| `recon-tool` | Python-based recon workflow for subdomain enumeration, port scanning and HTML reporting | upcoming |
 
 ---
 
