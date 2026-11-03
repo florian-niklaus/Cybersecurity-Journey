@@ -1,132 +1,142 @@
 # 🔐 Cybersecurity Journey
 
-> Im Flo and im starting to study Information security upcoming WS in 2026.
-> I´ll build up offensive/defensive security skills from the ground up — systematically, publicly, and with the side-goal of generating "passive" income through Bug Bounty and freelance pentesting while studying.
+Hi, I’m Florian — a Computer Science student and InfoSec working student at SSI Schäfer.  
+I’m currently studying **B.Eng. Information Security** and building practical offensive and defensive security skills in public.
+
+This repository is my structured learning portfolio: labs, write-ups, notes, cheatsheets and small tools.  
+My current focus is **web security, Linux, networking, privilege escalation and SOC fundamentals**.
 
 ---
 
 ## 👤 Background
 
-- **Working student** in an InfoSec team at SSI Schäfer 
-- **7 semesters** of Computer Science — networking, OS, programming fundamentals in place
-- Familiar with Wireshark, basic network analysis, Linux terminal
-- Starting B.En. in Information Security, October 2026
-
-This repo documents everything: labs, writeups, tools I build, and the roadmap I follow. No gatekeeping, no polished-after-the-fact posts — raw progress.
+- Working student in an InfoSec team at SSI Schäfer  
+- Computer Science student with coursework in networking, operating systems and programming  
+- Starting B.Eng. Information Security in October 2026  
+- Familiar with Linux, networking fundamentals, Wireshark, Burp Suite and Nmap  
+- Interested in SOC operations, vulnerability assessment, web security and offensive security  
 
 ---
 
-## 🗺️ Roadmap Overview
+## 🎯 Current Focus
+
+- Strengthen web-security fundamentals through PortSwigger Web Security Academy  
+- Build practical Linux and Active Directory knowledge  
+- Practice enumeration, privilege escalation and reporting through guided labs  
+- Develop small security tooling in Python  
+- Document labs and findings in clear, reproducible write-ups  
+
+---
+
+## 🗺️ Learning Roadmap
 
 | Phase | Timeframe | Focus | Status |
 |---|---|---|---|
-| **Phase 1** | Jun – Sep 2026 | Foundations: Web Security, Linux, HTB, own tools | 🔄 In Progress |
-| **Phase 2** | Oct 2026 – Jan 2027 | Specialization: eJPT cert, Bug Bounty, Fiverr | ⏳ Upcoming |
-| **Phase 3** | Feb 2027+ | First income: Freelance Pentesting, OSCP prep | ⏳ Upcoming |
+| **Phase 1** | Jun – Sep 2026 | Web security, Linux, networking, HTB basics | 🔄 In progress |
+| **Phase 2** | Oct 2026 – Jan 2027 | Active Directory, privilege escalation, eJPT preparation, SOC fundamentals | ⏳ Upcoming |
+| **Phase 3** | Feb 2027+ | Deeper offensive security, cloud security basics, detection engineering | ⏳ Planned |
 
 ---
 
-## 📘 Phase 1 — Foundations (Jun – Sep 2026)
+## 📘 Phase 1 — Foundations
 
-**Goal:** Build a solid technical base across web security, Linux, and network analysis. Complete at least 6 HTB Easy Machines independently. Build a working recon tool. Publish 12 writeups.
+**Goal:** Build a solid technical base in web security, Linux, networking and basic offensive security.
 
-### Curriculum
+### Completed
 
-| Area | Platform / Resource | Status |
+- [x] TryHackMe — Linux Fundamentals  
+- [x] TryHackMe — Network Fundamentals  
+- [x] TryHackMe — OWASP Top 10  
+- [x] PortSwigger — Path Traversal  
+- [x] PortSwigger — File Upload Vulnerabilities  
+- [x] PortSwigger — Authentication  
+- [x] Tooling basics: Burp Suite, Nmap, Wireshark  
+
+### In progress
+
+- [ ] PortSwigger — SQL Injection  
+- [ ] PortSwigger — XSS  
+- [ ] PortSwigger — IDOR  
+- [ ] PortSwigger — SSRF  
+- [ ] PortSwigger — XXE  
+- [ ] TryHackMe — Linux Privilege Escalation  
+- [ ] TryHackMe — Windows Privilege Escalation  
+- [ ] Hack The Box — Starting Point and easy machines  
+- [ ] Python recon tool: subdomain enumeration, port scanning and HTML reporting  
+
+### Milestones
+
+- [ ] Solve an HTB easy machine without a walkthrough  
+- [ ] Complete core PortSwigger Web Security Academy modules  
+- [ ] Publish structured write-ups for completed labs  
+- [ ] Publish first version of the recon tool  
+
+---
+
+## 📗 Phase 2 — Specialization
+
+**Goal:** Move from fundamentals into more realistic attack and defence scenarios.
+
+### Planned topics
+
+- Active Directory fundamentals and common attack paths  
+- Privilege escalation on Linux and Windows  
+- eJPT preparation  
+- SOC fundamentals: log analysis, alert triage, detection concepts  
+- Cloud security basics, including common AWS misconfigurations  
+- More advanced web-security topics: deserialization, HTTP request smuggling, OAuth  
+
+---
+
+## 📕 Phase 3 — Deeper Specialization
+
+**Goal:** Build a stronger technical profile for security engineering, SOC and offensive-security roles.
+
+### Planned topics
+
+- Advanced offensive-security techniques  
+- Detection engineering and threat hunting basics  
+- Cloud security  
+- Security automation with Python  
+- Continued certification and lab work  
+
+---
+
+## 🛠️ Tools
+
+| Tool | Description | Status |
 |---|---|---|
-| Linux Fundamentals | TryHackMe – Linux Fundamentals (1–3) | ✅ |
-| Network Basics | TryHackMe – Network Fundamentals | ✅ |
-| Web Security – SQLi✅, XSS✅, IDOR | PortSwigger Web Academy | ⬜ |
-| Web Security – SSRF, XXE, Auth✅ | PortSwigger Web Academy | ⬜ |
-| Web Security - Path traversal✅ , File Upload vulnerability ✅ | PortSwigger Web Academy | ✅ | 
-| OWASP Top 10 | TryHackMe – OWASP Top 10 Room | ✅ |
-| Privilege Escalation | TryHackMe – Linux + Windows PrivEsc | ⬜ |
-| Active Directory Basics | TryHackMe – AD Rooms | ⬜ |
-| Practical Hacking | Hack The Box – Starting Point + Easy Machines | ⬜ |
-| Tooling | Burp Suite✅, Nmap✅, Gobuster, Wireshark✅ | ⬜ |
-| Own Tool | Python Recon Script (subfinder + nmap + HTML report) | ⬜ |
-
-### Phase 1 Milestone
-- [ ] Solve an HTB Easy Machine without a walkthrough
-- [ ] Complete PortSwigger Web Academy core modules
-- [ ] Complete TryhackMe modules
-- [ ] Publish recon tool (`/tools/recon/`)
-- [ ] 36 writeups published
+| `recon-tool` | Python-based recon workflow for subdomain enumeration, port scanning and HTML reporting | In progress |
 
 ---
 
-## 📗 Phase 2 — Specialization (Oct 2026 – Jan 2027)
+## 📁 Repository Structure
 
-**Goal:** Pass eJPT certification. Submit first Bug Bounty reports. Set up Fiverr profile for micro-freelancing. Start generating first income.
-
-### Planned Curriculum
-
-- INE eJPT Course + Exam 
-- HackerOne / Bugcrowd — active Bug Bounty hunting (web-focused scope)
-- PortSwigger Advanced Labs (Deserialization, HTTP Smuggling, OAuth)
-- Cloud Security Basics (AWS misconfigs via CloudGoat)
-
-### Targets (Phase 2)
-
-| Channel | Notes |
-|---|---|
-| Bug Bounty (HackerOne) | Low/Medium findings, no guarantee |
-| Fiverr Micro-Gigs | Security review |
-| Freelance (direct) | Via network, needs portfolio first |
-
-
----
-
-## 📕 Phase 3 — First Real Income (Feb 2027+)
-
-**Goal:** Consistent side income. Freelance pentesting engagements. OSCP preparation. Transition from micro-gigs to proper client work.
-
-### Planned Steps
-
-- OSCP preparation (PEN-200 course, ~1500 €) — if budget allows
-- Upwork profile (complementing Fiverr) for higher-ticket projects
-- LinkedIn network building in the DACH InfoSec community
-- First proper pentest engagement (small scope, startup or SMB)
-
-
-
-## 🛠️ Tools & Repos
-
-| Tool | Description | Link |
-|---|---|---|
-| `recon-tool` | Automated subdomain enum + port scan + HTML report | *(coming Phase 1, Wo 7)* |
-
----
-
-## 📁 Repo Structure
-
-```
+```text
 cybersecurity-journey/
 ├── README.md
 ├── Writeups/
-│   ├── Phase1/
-│   │   ├── Portswigger-SQLInjection.md
-│   │   └── ...
-│   └── Phase2/
-├── Tools/
-│    ├── Recon/
-│       └── ...
+│   ├── PortSwigger/
+│   ├── TryHackMe/
+│   └── HackTheBox/
 ├── Notes/
-│   ├── WiresharkBasics
-│   └── ...
-├── Cheatsheets
-|   ├── Linux.md
-|   └── ....  
-└──
-
+│   ├── Linux/
+│   ├── Networking/
+│   └── SOC/
+├── Cheatsheets/
+│   ├── Linux.md
+│   ├── Nmap.md
+│   └── Wireshark.md
+└── Tools/
+    └── recon/
 ```
 
 ---
 
 ## 📬 Contact
 
-- **LinkedIn:** https://www.linkedin.com/in/florian-niklaus-652786270/
+- LinkedIn: [Florian Niklaus](https://www.linkedin.com/in/florian-niklaus-652786270/)
 
 ---
 
-*Started: June 2026 · Updated: regularly*
+*Started: June 2026 · Updated regularly*
