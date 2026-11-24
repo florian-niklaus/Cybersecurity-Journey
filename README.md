@@ -1,6 +1,6 @@
 # 🔐 Cybersecurity Journey
 
-Hi, I’m Florian — a Computer Science student and InfoSec working student at SSI Schäfer.  
+Hi, I’m Florian — a Information security student and InfoSec working student at SSI Schäfer.  
 I’m currently studying **B.Eng. Information Security** and building practical offensive and defensive security skills in public.
 
 This repository is my structured learning portfolio: labs, write-ups, notes, cheatsheets and small tools.  
@@ -28,7 +28,7 @@ My current focus is **web security, Linux, networking, privilege escalation and 
 
 ## 🗺️ Learning Roadmap
 
-| Phase | Timeframe | Focus | Status |
+| Phase | Focus | Status |
 |---|---|---|
 | **Phase 1**  | Web security, Linux, networking, HTB basics | 🔄 In progress |
 | **Phase 2**  | Active Directory, privilege escalation, eJPT preparation, SOC fundamentals | ⏳ Upcoming |
@@ -65,7 +65,7 @@ My current focus is **web security, Linux, networking, privilege escalation and 
 
 ### Milestones
 
-- [ ] Solve an HTB easy machine without a walkthrough  
+- [x] Solve an HTB easy machine without a walkthrough  
 - [ ] Complete core PortSwigger Web Security Academy modules  
 - [ ] Publish structured write-ups for completed labs  
 - [ ] Publish first version of the recon tool  
@@ -135,6 +135,7 @@ cybersecurity-journey/
 ## 📬 Contact
 
 - LinkedIn: [Florian Niklaus](https://www.linkedin.com/in/florian-niklaus-652786270/)
+- Mail: Florian.niklaus99@gmail.com
 
 ---
 
