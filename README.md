@@ -6,6 +6,8 @@ I’m currently studying **B.Eng. Information Security** and building practical 
 This repository is my structured learning portfolio: labs, write-ups, notes, cheatsheets and small tools.  
 My current focus is **web security, Linux, networking, privilege escalation and SOC fundamentals**.
 
+Currently paused due to studies at university
+
 ---
 
 ## 👤 Background
